@@ -2,7 +2,7 @@
 
 Trulay の公開開発ログ・技術メモ用リポジトリです。
 
-製品コード本体は private repository で管理し、このリポジトリでは公開可能な開発ログ、技術選定、設計判断、学習メモ、サンプルコードのみを扱います。
+製品コード本体は非公開リポジトリで管理し、このリポジトリでは公開可能な開発ログ、技術選定、設計判断、学習メモ、サンプルコードのみを扱います。
 
 ## 公開サイト
 
@@ -16,7 +16,7 @@ GitHub Pages で公開予定です。
 - 技術選定の理由
 - 設計判断の記録
 - 学習メモ
-- 公開しても問題ないサンプルコード
+- 公開用に切り出したサンプルコード
 
 ## 公開しない内容
 
@@ -43,4 +43,4 @@ npm run docs:build
 
 GitHub Pages は GitHub Actions からデプロイする想定です。
 
-Repository Settings の Pages で Source を `GitHub Actions` に設定します。
+GitHub のリポジトリ設定で Pages の Source を `GitHub Actions` に設定します。
