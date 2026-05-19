@@ -1,23 +1,274 @@
 :root {
-  --vp-c-brand-1: #0f766e;
+  --trulay-ink: #1f3f4f;
+  --trulay-muted: #5e7080;
+  --trulay-teal: #0f8f86;
+  --trulay-cyan: #1aa7b8;
+  --trulay-light: #edf9f7;
+  --trulay-gold: #f4c95d;
+  --trulay-line: #d7e7e5;
+  --vp-c-brand-1: #0f8f86;
   --vp-c-brand-2: #0e7490;
-  --vp-c-brand-3: #14b8a6;
-  --vp-c-brand-soft: rgba(20, 184, 166, 0.14);
+  --vp-c-brand-3: #42c7be;
+  --vp-c-brand-soft: rgba(15, 143, 134, 0.12);
+  --vp-c-bg: #fbfefd;
+  --vp-c-bg-alt: #f0f8f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #edf9f7;
+  --vp-c-text-1: #1f3f4f;
+  --vp-c-text-2: #5e7080;
+  --vp-c-text-3: #7c8d99;
+  --vp-c-divider: #d7e7e5;
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #0f766e 0%, #0e7490 60%, #facc15 100%);
+  --vp-home-hero-name-background: linear-gradient(120deg, #0f8f86 0%, #1aa7b8 68%, #f4c95d 100%);
+  --vp-button-brand-bg: #0f8f86;
+  --vp-button-brand-hover-bg: #0e7490;
+  --vp-button-brand-active-bg: #0b5f66;
+  --vp-button-brand-border: #0f8f86;
+  --vp-button-brand-hover-border: #0e7490;
+}
+
+.dark {
+  --trulay-ink: #edf9f7;
+  --trulay-muted: #a8bbc4;
+  --trulay-light: #102f3d;
+  --trulay-line: rgba(128, 202, 197, 0.2);
+  --vp-c-brand-1: #5ee0d4;
+  --vp-c-brand-2: #43c6d8;
+  --vp-c-brand-3: #0f8f86;
+  --vp-c-brand-soft: rgba(94, 224, 212, 0.16);
+  --vp-c-bg: #071a24;
+  --vp-c-bg-alt: #0b2430;
+  --vp-c-bg-elv: #102c3a;
+  --vp-c-bg-soft: #0f2b38;
+  --vp-c-text-1: #edf9f7;
+  --vp-c-text-2: #a8bbc4;
+  --vp-c-text-3: #8298a4;
+  --vp-c-divider: rgba(128, 202, 197, 0.18);
+  --vp-button-brand-bg: #0f8f86;
+  --vp-button-brand-hover-bg: #19a99f;
+  --vp-button-brand-active-bg: #43c6d8;
+}
+
+body {
+  color: var(--vp-c-text-1);
+}
+
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBar.has-sidebar .content,
+.VPNavBar.home {
+  background: color-mix(in srgb, var(--vp-c-bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.VPSidebar {
+  background: var(--vp-c-bg-alt);
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBarTitle .title {
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .VPHomeHero .text {
   max-width: 720px;
+  color: var(--vp-c-text-1);
+}
+
+.VPHomeHero .tagline {
+  color: var(--vp-c-text-2);
+  max-width: 680px;
+}
+
+.VPHomeHero .main {
+  padding-top: 20px;
+}
+
+.VPHomeHero .image {
+  opacity: 0.9;
 }
 
 .VPFeature {
-  border-radius: 10px;
+  background: linear-gradient(180deg, var(--vp-c-bg-elv), var(--vp-c-bg-soft));
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(15, 73, 89, 0.06);
+}
+
+.VPFeature .title {
+  color: var(--vp-c-text-1);
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-2);
+}
+
+.trulay-hero {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--trulay-light) 72%, var(--vp-c-bg-elv)), var(--vp-c-bg-elv));
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  margin: 8px 0 32px;
+  padding: 48px;
+}
+
+.trulay-hero-kicker {
+  color: var(--vp-c-brand-1);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0 0 18px;
+}
+
+.trulay-hero h1 {
+  border: 0;
+  color: #2b5f69;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.dark .trulay-hero h1 {
+  color: #9bd8d2;
+}
+
+.trulay-hero h1::after {
+  background: var(--vp-c-brand-1);
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 20px;
+  opacity: 0.72;
+  width: 72px;
+}
+
+.trulay-hero-lead {
+  color: var(--vp-c-text-2);
+  font-size: 18px;
+  line-height: 1.9;
+  margin: 24px 0 0;
+  max-width: 720px;
+}
+
+.trulay-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.trulay-button {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 13px 18px;
+  text-decoration: none !important;
+}
+
+.trulay-button.primary {
+  background: var(--vp-c-brand-1);
+  color: #ffffff;
+}
+
+.trulay-button.secondary {
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+}
+
+.trulay-intro-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 0 36px;
+}
+
+.trulay-intro-grid > div {
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.trulay-intro-grid h2 {
+  border: 0;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.trulay-intro-grid p {
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 12px 0 0;
+}
+
+.vp-doc {
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc h1 {
+  color: var(--vp-c-text-1);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.vp-doc h1::after {
+  background: linear-gradient(90deg, var(--trulay-teal), var(--trulay-cyan), var(--trulay-gold));
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 18px;
+  width: 96px;
 }
 
 .vp-doc h2 {
   border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
   padding-top: 24px;
+}
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  font-weight: 650;
+  text-decoration-color: color-mix(in srgb, var(--vp-c-brand-1) 38%, transparent);
+  text-underline-offset: 3px;
+}
+
+.vp-doc table {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vp-doc tr {
+  background: var(--vp-c-bg-elv);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 70%, var(--vp-c-bg-elv));
+}
+
+.vp-doc th {
+  background: color-mix(in srgb, var(--trulay-light) 82%, var(--vp-c-bg-elv));
+  color: var(--vp-c-text-1);
+  font-weight: 800;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border-color: var(--vp-c-divider);
 }
 
 .roadmap-grid {
@@ -30,8 +281,10 @@
 .roadmap-card,
 .roadmap-snapshot {
   border: 1px solid var(--vp-c-divider);
-  background: linear-gradient(180deg, rgba(20, 184, 166, 0.08), rgba(14, 116, 144, 0.04));
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--trulay-light) 82%, var(--vp-c-bg-elv)), var(--vp-c-bg-elv));
   border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(15, 73, 89, 0.06);
 }
 
 .roadmap-card {
@@ -50,8 +303,7 @@
   color: var(--vp-c-text-2);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .roadmap-snapshot {
@@ -82,7 +334,7 @@
 }
 
 .progress-track {
-  background: rgba(15, 118, 110, 0.14);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 15%, var(--vp-c-bg-elv));
   border-radius: 999px;
   height: 10px;
   margin-top: 14px;
@@ -90,7 +342,7 @@
 }
 
 .progress-track span {
-  background: linear-gradient(90deg, #0f766e, #0e7490, #facc15);
+  background: linear-gradient(90deg, var(--trulay-teal), var(--trulay-cyan), var(--trulay-gold));
   border-radius: inherit;
   display: block;
   height: 100%;
@@ -108,17 +360,33 @@
 }
 
 .status-badge.done {
-  background: rgba(22, 163, 74, 0.14);
-  color: #15803d;
+  background: rgba(15, 143, 134, 0.14);
+  color: var(--vp-c-brand-1);
 }
 
 .status-badge.active {
-  background: rgba(37, 99, 235, 0.14);
-  color: #2563eb;
+  background: rgba(244, 201, 93, 0.22);
+  color: #9b6a12;
+}
+
+.dark .status-badge.active {
+  color: #f6d98a;
 }
 
 @media (max-width: 720px) {
   .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trulay-hero {
+    padding: 32px 24px;
+  }
+
+  .trulay-hero h1 {
+    font-size: 44px;
+  }
+
+  .trulay-intro-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -131,41 +399,184 @@
   max-width: 1180px;
 }
 
-.roadmap-page .VPDocAside {
-  display: none;
+.roadmap-scroll-hint {
+  align-items: center;
+  appearance: none;
+  background: rgba(6, 31, 35, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(6, 31, 35, 0.24);
+  color: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  left: 50%;
+  margin: 0;
+  min-width: 210px;
+  padding: 22px 28px 18px;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  z-index: 3;
 }
 
-.roadmap-page .vp-doc table {
+.roadmap-scroll-hint:hover {
+  background: rgba(6, 31, 35, 0.56);
+}
+
+.roadmap-scroll-hand {
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1;
+}
+
+.roadmap-scroll-hand-motion {
+  animation: roadmap-hand-slide 1.6s ease-in-out 2 !important;
+  display: inline-block;
+  will-change: transform;
+}
+
+.roadmap-scroll-hand svg {
+  display: block;
+  height: 70px;
+  width: 70px;
+}
+
+.roadmap-scroll-hint-text {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@keyframes roadmap-hand-slide {
+  0% {
+    opacity: 0;
+    transform: translate3d(22px, 0, 0) rotate(8deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translate3d(22px, 0, 0) rotate(8deg);
+  }
+  58% {
+    opacity: 1;
+    transform: translate3d(-22px, 0, 0) rotate(-8deg);
+  }
+  72% {
+    opacity: 0;
+    transform: translate3d(-22px, 0, 0) rotate(-8deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(22px, 0, 0) rotate(8deg);
+  }
+}
+
+.roadmap-hint-enter-active,
+.roadmap-hint-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.roadmap-hint-enter-from,
+.roadmap-hint-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(-6px);
+}
+
+.roadmap-table-scroll {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  cursor: grab;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-color: var(--vp-c-brand-1) color-mix(in srgb, var(--vp-c-brand-1) 14%, var(--vp-c-bg-elv));
+  scrollbar-width: thin;
+  touch-action: pan-x;
+  position: relative;
+}
+
+.roadmap-table-scroll:active {
+  cursor: grabbing;
+}
+
+.roadmap-table-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.roadmap-table-scroll::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg-elv));
+  border-radius: 999px;
+}
+
+.roadmap-table-scroll::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 999px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll .roadmap-table {
+  border: 0;
+  border-radius: 0;
   display: table;
   font-size: 14px;
   line-height: 1.45;
-  min-width: 1080px;
+  margin: 0;
+  min-width: 1320px;
+  table-layout: fixed;
+  user-select: none;
+  width: 1320px;
 }
 
-.roadmap-page .vp-doc th,
-.roadmap-page .vp-doc td {
+.roadmap-page .vp-doc .roadmap-table-scroll,
+.roadmap-page .vp-doc .roadmap-table-scroll * {
+  cursor: grab;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th,
+.roadmap-page .vp-doc .roadmap-table-scroll td {
   padding: 10px 12px;
   vertical-align: middle;
 }
 
-.roadmap-page .vp-doc th:nth-child(1),
-.roadmap-page .vp-doc td:nth-child(1),
-.roadmap-page .vp-doc th:nth-child(2),
-.roadmap-page .vp-doc td:nth-child(2),
-.roadmap-page .vp-doc th:nth-child(3),
-.roadmap-page .vp-doc td:nth-child(3),
-.roadmap-page .vp-doc th:nth-child(5),
-.roadmap-page .vp-doc td:nth-child(5),
-.roadmap-page .vp-doc th:nth-child(6),
-.roadmap-page .vp-doc td:nth-child(6),
-.roadmap-page .vp-doc th:nth-child(7),
-.roadmap-page .vp-doc td:nth-child(7),
-.roadmap-page .vp-doc th:nth-child(8),
-.roadmap-page .vp-doc td:nth-child(8) {
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(1),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(1) {
+  width: 118px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(2),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(2) {
+  width: 100px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(3),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(3) {
+  width: 142px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(5),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(5) {
+  width: 90px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(6),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(6) {
+  width: 60px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(7),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(7),
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(8),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(8) {
+  width: 84px;
+}
+
+.roadmap-page .vp-doc .roadmap-table-scroll th:not(:nth-child(4)),
+.roadmap-page .vp-doc .roadmap-table-scroll td:not(:nth-child(4)) {
   white-space: nowrap;
 }
 
-.roadmap-page .vp-doc th:nth-child(4),
-.roadmap-page .vp-doc td:nth-child(4) {
-  min-width: 260px;
+.roadmap-page .vp-doc .roadmap-table-scroll th:nth-child(4),
+.roadmap-page .vp-doc .roadmap-table-scroll td:nth-child(4) {
+  width: 520px;
 }
