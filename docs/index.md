@@ -9,7 +9,7 @@ layout: doc
     信頼を軸に、個人で仕事を受ける人と企業が安心してつながるサービスを育てています。
   </p>
   <div class="trulay-hero-actions">
-    <a class="trulay-button primary" href="./dev-logs/2026-05/2026-05-18.html">最新ログを見る</a>
+    <a class="trulay-button primary" href="./dev-logs/2026-05/2026-05-19.html">最新ログを見る</a>
     <a class="trulay-button secondary" href="./roadmap/project-roadmap.html">ロードマップを見る</a>
   </div>
 </section>
