@@ -9,7 +9,7 @@ layout: doc
     信頼を軸に、個人で仕事を受ける人と企業が安心してつながるサービスを育てています。
   </p>
   <div class="trulay-hero-actions">
-    <a class="trulay-button primary" href="./dev-logs/2026-05/2026-05-19.html">最新ログを見る</a>
+    <a class="trulay-button primary" href="./dev-logs/2026-05/2026-05-20.html">最新ログを見る</a>
     <a class="trulay-button secondary" href="./roadmap/project-roadmap.html">ロードマップを見る</a>
   </div>
 </section>
@@ -32,9 +32,9 @@ layout: doc
 <div class="roadmap-snapshot large">
   <div>
     <p class="snapshot-label">フェーズ1: フリーランス向け営業管理</p>
-    <p class="snapshot-progress">進捗: 5 / 28件</p>
+    <p class="snapshot-progress">進捗: 7 / 28件</p>
   </div>
-  <div class="progress-track"><span style="width: 17.9%"></span></div>
+  <div class="progress-track"><span style="width: 25%"></span></div>
 </div>
 
 [全体ロードマップを見る](./roadmap/project-roadmap.md)
