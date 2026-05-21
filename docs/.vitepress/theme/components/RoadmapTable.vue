@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
           <th>タスク</th>
           <th>状態</th>
           <th>予定</th>
-          <th>開始</th>
+          <th>開始予定日</th>
           <th>期限</th>
         </tr>
       </thead>
