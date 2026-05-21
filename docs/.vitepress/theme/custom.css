@@ -493,7 +493,7 @@ body {
   overscroll-behavior-x: contain;
   scrollbar-color: var(--vp-c-brand-1) color-mix(in srgb, var(--vp-c-brand-1) 14%, var(--vp-c-bg-elv));
   scrollbar-width: thin;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y;
   position: relative;
 }
 
